@@ -1,5 +1,5 @@
 // import * as config from "./config";
-import selectOrCreateRoom from "./selectOrCreateRoom";
+import rooms from "./rooms";
 import game from "./game";
 
 // export default io => {
@@ -11,6 +11,6 @@ import game from "./game";
 // };
 
 export default io => {
-  selectOrCreateRoom(io.of('/rooms'));
+  rooms(io.of('/rooms'));
   game(io.of('/game'));
 }
