@@ -1,7 +1,7 @@
 const username = sessionStorage.getItem("username");
 
 if (username) {
-  window.location.replace("/game");
+  window.location.replace("/rooms");
 }
 
 const submitButton = document.getElementById("submit-button");
@@ -15,7 +15,7 @@ const onClickSubmitButton = () => {
     return;
   }
   sessionStorage.setItem("username", inputValue);
-  window.location.replace("/game");
+  window.location.replace("/select-room");
 };
 
 const onKeyUp = ev => {
